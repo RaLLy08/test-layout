@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./pages/main";
+import { ThemeProvider } from "styled-components";
 
 function App() {
+  const theme = {
+      color: {
+          primary: "#f6f7ff",
+          secondary: "#9292A6",
+          danger: "#FF7878",
+          active: "#7B82FF",
+          inactive: "#FFE8E8",
+          mainText: "#080A39",
+      },
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={theme}>
+          <Main />
+      </ThemeProvider>
   );
 }
-
+ 
 export default App;
