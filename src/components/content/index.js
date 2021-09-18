@@ -32,20 +32,20 @@ function Content() {
                     isnearestPaymentToday
                 />
                 <ListItem
-                    mail="@spb.designer"
+                    user="@spb.designer"
                     followers="11K"
                     paymentDate="11 августа 2021"
                     status="reboot"
                 ></ListItem>
                 <ListItem
-                    mail="@spb.designer"
+                    user="@spb.designer"
                     followers="14K"
                     paymentDate="12 августа 2021"
                     dialogs={230}
                     status="active"
                 ></ListItem>
                 <ListItem
-                    mail="@spb.designer"
+                    user="@spb.designer"
                     followers="9K"
                     paymentDate="5 августа 2021"
                     status="inactive"

@@ -2,21 +2,21 @@ import React from "react";
 import Popup from "reactjs-popup";
 import BalanceAlert from "./BalanceAlert";
 
-import { ShowMoreWraper, ShowMoreAction } from "./styled";
+import { ShowMoreWraper, SettingsAction } from "./styled";
 
 function ShowMore() {
     return (
         <ShowMoreWraper>
             <Popup
                 trigger={(open) => (
-                    <ShowMoreAction>Уровнять платежи каналов</ShowMoreAction>
+                    <SettingsAction>Уровнять платежи каналов</SettingsAction>
                 )}
             >
                 <BalanceAlert />
             </Popup>
-            <ShowMoreAction>Перезагрузить все</ShowMoreAction>
-            <ShowMoreAction>Отключить все</ShowMoreAction>
-            <ShowMoreAction>Удалить все</ShowMoreAction>
+            <SettingsAction>Перезагрузить все</SettingsAction>
+            <SettingsAction>Отключить все</SettingsAction>
+            <SettingsAction>Удалить все</SettingsAction>
         </ShowMoreWraper>
     );
 }

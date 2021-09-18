@@ -4,7 +4,7 @@ import * as S from "./styled";
 import UserPhotoSvg from "./img/Userphoto.svg";
 import NotifyRingSvg from "./img/NotifyRing.svg";
 import ArrowSvg from "./img/ArrowDown.svg";
-import PopupContent from "./popup";
+import UserPopup from "./popup";
 
 function Header() {
     return (
@@ -51,7 +51,7 @@ function Header() {
                         offsetY={45}
                         closeOnDocumentClick
                     >
-                        <PopupContent />
+                        <UserPopup />
                     </Popup>
                 </S.Right>
             </S.Wrapper>

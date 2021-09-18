@@ -3,18 +3,20 @@ import UserLogoSvg from '../img/UserLogo.svg'
 import SettingsSvg from "../img/Settings.svg";
 import InfinitySvg from "../img/Infinity.svg";
 import Status from "./Status";
+import Popup from "reactjs-popup";
+import Settings from "../popup/Settings";
 
-function ListItem({ mail, dialogs, followers, status, paymentDate }) {
+function ListItem({ user, dialogs, followers, status, paymentDate }) {
     return (
         <S.Wrapper inactive={status === "inactive"}>
             <S.Content>
                 <S.ContentBox>
-                    <S.MailLogo>
+                    <S.UserLogo>
                         <S.Img src={UserLogoSvg} width="32px" height="32px" />
-                    </S.MailLogo>
-                    <S.MailWrapper>
-                        <S.Mail>{mail}</S.Mail>
-                    </S.MailWrapper>
+                    </S.UserLogo>
+                    <S.UserWrapper>
+                        <S.UserTitle>{user}</S.UserTitle>
+                    </S.UserWrapper>
                 </S.ContentBox>
                 <S.ContentBox>
                     <S.Followers>{followers}</S.Followers>
@@ -60,9 +62,22 @@ function ListItem({ mail, dialogs, followers, status, paymentDate }) {
                 </S.ContentBox>
             </S.Content>
             <S.Actions>
-                <S.SettingsButton>
-                    <S.Img src={SettingsSvg} width="18px" height="18px" />
-                </S.SettingsButton>
+                <Popup
+                    trigger={(open) => (
+                        <S.SettingsButton>
+                            <S.Img
+                                src={SettingsSvg}
+                                width="18px"
+                                height="18px"
+                            />
+                        </S.SettingsButton>
+                    )}
+                    offsetX={70}
+                    // offsetY={45}
+                    closeOnDocumentClick
+                >
+                    <Settings />
+                </Popup>
             </S.Actions>
         </S.Wrapper>
     );

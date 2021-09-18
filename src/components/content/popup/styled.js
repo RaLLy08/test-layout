@@ -31,7 +31,7 @@ export const ShowMoreWraper = styled.div`
     width: 155px;
 `;
 
-export const ShowMoreAction = styled.div`
+export const SettingsAction = styled.div`
     font-size: 12px;
     cursor: pointer;
     font-weight: 500;
@@ -84,7 +84,31 @@ export const CloseButton = styled.div`
 `;
 
 export const Img = styled.img`
-   
 `;
+
+export const SettingsWraper = styled.div`
+    ${Popap}
+    display: flex;
+    padding: 14px 20px 15px 13px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(146, 146, 166, 0.2);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 86px;
+    width: 132px;
+`;
+
+export const SettingsActionBox = styled.div`
+   display: flex;
+  
+`;
+
+export const SettingsIcon = styled.div`
+    display: flex;
+    width: 20px;
+    height: 100%;
+    align-items: center;
+`;
+
 
 

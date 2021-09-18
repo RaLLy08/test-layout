@@ -28,13 +28,13 @@ export const ContentBox = styled.div`
 
 export const Img = styled.img``;
 
-export const MailLogo = styled.div`
+export const UserLogo = styled.div`
     width: 50px;
     display: flex;
     justify-content: center;
 `;
 
-export const MailWrapper = styled.div`
+export const UserWrapper = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
@@ -43,7 +43,7 @@ export const MailWrapper = styled.div`
     padding-right: 4px;
 `;
 
-export const Mail = styled.span`
+export const UserTitle = styled.span`
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
