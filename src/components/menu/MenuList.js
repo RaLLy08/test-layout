@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Icon, ListIconWrapper, ListItem, ListTitle } from "./styled";
+import { List, Img, ListIconWrapper, ListItem, ListTitle } from "./styled";
 import PlusIcon from './img/Plus.svg'
 import QuestionIcon from './img/Question.svg'
 import IntegrationIcon from "./img/Integration.svg";
@@ -51,13 +51,15 @@ function MenuList() {
                 const listTitleProps = item.listTitleProps || {};
 
                 return (
-                    <ListItem key={i} {...listItemProps} onClick={() => setActive(i)}>
+                    <ListItem
+                        key={i}
+                        {...listItemProps}
+                        onClick={() => setActive(i)}
+                    >
                         <ListIconWrapper>
-                            <Icon src={item.icon} />
+                            <Img src={item.icon} />
                         </ListIconWrapper>
-                        <ListTitle {...listTitleProps}>
-                            {item.title}
-                        </ListTitle>
+                        <ListTitle {...listTitleProps}>{item.title}</ListTitle>
                     </ListItem>
                 );
             })}

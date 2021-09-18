@@ -11,3 +11,5 @@ export const Wrapper = styled.div`
 export const ContentWraper = styled.div`
     width: 846px;
 `;
+
+export const Img = styled.img``;

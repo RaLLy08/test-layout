@@ -6,13 +6,13 @@ import {
     AlertSum,
     AlertTitle,
     AlertAction,
-    CloseImg,
     ArrowLeftUpImg,
     CloseButton,
+    Img,
 } from "./styled";
 
-import CloseIcon from "../img/Close.svg";
-import ArrowLeftUpIcon from "../img/ArrowLeftUp.svg";
+import CloseSvg from "../img/Close.svg";
+import ArrowLeftUpSvg from "../img/ArrowLeftUp.svg";
 
 function BalanceAlert() {
     return (
@@ -25,10 +25,10 @@ function BalanceAlert() {
             </AlertTitle>
             <AlertAction>
                 <CloseButton>
-                    <CloseImg src={CloseIcon} />
+                    <Img src={CloseSvg} width="10px" height="10px" />
                 </CloseButton>
             </AlertAction>
-            <ArrowLeftUpImg src={ArrowLeftUpIcon}/>
+            <ArrowLeftUpImg src={ArrowLeftUpSvg} />
         </AlertWraper>
     );
 }

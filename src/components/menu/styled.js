@@ -67,6 +67,5 @@ export const ListIconWrapper = styled.div`
     text-align: center;
 `;
 
-export const Icon = styled.img`
-    height: fit-content;
+export const Img = styled.img`
 `;

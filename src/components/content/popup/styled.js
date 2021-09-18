@@ -70,8 +70,7 @@ export const AlertAction = styled.div`
     margin-left: 16px;
 `;
 
-export const CloseImg = styled.img`
-`;
+
 export const ArrowLeftUpImg = styled.img`
     position: absolute;
     transform: translate(242px, -10px);
@@ -82,6 +81,10 @@ export const CloseButton = styled.div`
     height: 10px;
     width: 10px;
     display: flex;
+`;
+
+export const Img = styled.img`
+   
 `;
 
 

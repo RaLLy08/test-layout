@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider } from "../styled";
-import UserPhotoLarge from "../img/Userphoto-large.svg";
+import UserPhotoLargeSvg from "../img/Userphoto-large.svg";
 import * as S from "./styled";
 
 
@@ -13,7 +13,7 @@ function User() {
                     <S.HeaderName>Привет, Кямиль!</S.HeaderName>
                 </S.HeaderTitle>
                 <S.HeaderIconWrapper>
-                    <S.UserPhotoLargeIcon src={UserPhotoLarge} />
+                    <S.Img src={UserPhotoLargeSvg} width="56px" height="56px" />
                 </S.HeaderIconWrapper>
                 <S.HeaderBottom>
                     <S.TextSecondary>nikiforovdesign@yandex.ru</S.TextSecondary>

@@ -1,6 +1,6 @@
 import MenuList from "./MenuList";
-import { Wrapper, Divider, Header, Main, Ellipce, Icon } from "./styled";
-import Naming from "./img/Naming.svg";
+import { Wrapper, Divider, Header, Main, Ellipce, Img } from "./styled";
+import NamingSvg from "./img/Naming.svg";
 
 function Menu() {
 
@@ -8,7 +8,7 @@ function Menu() {
         <Wrapper>
             <Header>
                 <Ellipce />
-                <Icon src={Naming} height='17px' width='108px'/>
+                <Img src={NamingSvg} height="17px" width="108px" />
             </Header>
             <Divider />
             <Main>

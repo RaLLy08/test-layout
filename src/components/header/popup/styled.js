@@ -43,6 +43,7 @@ export const HeaderIconWrapper = styled.div`
     height: 80px;
     width: 100%;
     display: flex;
+    align-items: center;
 `;
 
 export const HeaderBottom = styled.div``;
@@ -56,8 +57,7 @@ export const Footer = styled.div`
     margin-top: 10px;
 `;
 
-export const UserPhotoLargeIcon = styled.img`
-    align-self: center;
+export const Img = styled.img`
 `;
 
 export const TextSecondary = styled.div`

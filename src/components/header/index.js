@@ -1,9 +1,9 @@
 import Popup from "reactjs-popup";
 
 import * as S from "./styled";
-import UserPhoto from "./img/Userphoto.svg";
-import NotifyRing from "./img/NotifyRing.svg";
-import Arrow from "./img/ArrowDown.svg";
+import UserPhotoSvg from "./img/Userphoto.svg";
+import NotifyRingSvg from "./img/NotifyRing.svg";
+import ArrowSvg from "./img/ArrowDown.svg";
 import PopupContent from "./popup";
 
 function Header() {
@@ -23,25 +23,28 @@ function Header() {
                         </S.BalanceValue>
                     </S.Balance>
                     <S.Notifications>
-                        <S.RingNotifyWrapper>
-                            <S.Icon src={NotifyRing} />
-                        </S.RingNotifyWrapper>
+                        <S.Img src={NotifyRingSvg} width="29px" height="32px" />
                     </S.Notifications>
                     <Popup
                         trigger={(open) => (
                             <S.MailWrapper>
                                 <S.UserPhotoWrapper>
-                                    <S.UserPhotoIcon
-                                        src={UserPhoto}
-                                    ></S.UserPhotoIcon>
+                                    <S.Img
+                                        src={UserPhotoSvg}
+                                        width="32px"
+                                        height="32px"
+                                    />
                                 </S.UserPhotoWrapper>
-                                <S.Mail>
-                                    nikiforovdesign@yandex.ru
-                                    <S.ArrowIcon
-                                        src={Arrow}
-                                        up={open}
-                                    ></S.ArrowIcon>
-                                </S.Mail>
+                                <S.Mail>nikiforovdesign@yandex.ru</S.Mail>
+                                <S.MailAction>
+                                    <S.ArrowImgWraper up={open}>
+                                        <S.Img
+                                            src={ArrowSvg}
+                                            width="31px"
+                                            height="7px"
+                                        />
+                                    </S.ArrowImgWraper>
+                                </S.MailAction>
                             </S.MailWrapper>
                         )}
                         offsetX={-24}
