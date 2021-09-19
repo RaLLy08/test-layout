@@ -4,12 +4,52 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     height: 100%;
     margin-left: 6%;
-    padding-top: 50px;
+    padding-top: 20px;
     display: flex;
+    flex-direction: column;
 `;
 
 export const ContentWraper = styled.div`
-    width: 846px;
+    width: 843px;
+    margin-top: 30px;
 `;
 
 export const Img = styled.img``;
+
+
+export const User = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const UserLogo = styled.div`
+    margin-left: 10px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+`;
+
+export const UserWrapper = styled.div`
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    height: 20px;
+`;
+
+export const UserTitle = styled.span`
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: ${(props) => props.theme.color.mainText};
+`;
+
+export const Followers = styled.div`
+    width: 48px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: ${(props) => props.theme.color.secondary};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;

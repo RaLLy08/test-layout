@@ -1,13 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-
-export const Wrapper = styled.div`
+const WrapperStyles = css`
     height: 57px;
     max-width: 100%;
-    background-color: ${(props) =>
-        props.inactive
-            ? props.theme.color.inactive
-            : props.theme.color.primary};
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -17,58 +12,46 @@ export const Wrapper = styled.div`
     align-items: center;
 `;
 
+export const ItemWrapper = styled.div`
+    ${WrapperStyles}
+    background-color: ${(props) =>
+        props.inactive
+            ? props.theme.color.inactive
+            : props.theme.color.primary};
+`;
+
+export const AddWrapper = styled.div`
+    ${WrapperStyles}
+    border: solid 1px;
+    border-color: ${(props) => props.theme.color.primary};
+`;
+
 export const Content = styled.div`
     display: flex;
 `;
 
-export const ContentBox = styled.div`
+
+export const UserInfo = styled.div`
+    width: 199px;
     display: flex;
-    align-items: center;
 `;
 
 export const Img = styled.img``;
 
-export const UserLogo = styled.div`
-    width: 50px;
-    display: flex;
-    justify-content: center;
-`;
 
-export const UserWrapper = styled.div`
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    max-width: 96px;
-    padding-left: 4px;
-    padding-right: 4px;
-`;
 
-export const UserTitle = styled.span`
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: ${(props) => props.theme.color.mainText};
-`;
 
-export const Followers = styled.div`
-   width: 42px;
-   text-align: center;
-   font-size: 10px;
-   font-weight: 600;
-   color: ${props => props.theme.color.secondary}
-`;
 
 export const StatusWrapper = styled.div`
-    min-width: 114px;
+    width: 110px;
     box-sizing: border-box;
-    padding-left: 5px;
     display: flex;
     align-items: center;
 `;
 
 export const StatusIcon = styled.div`
     display: flex;
-    margin-right: 12px;
+    margin-right: 10px;
 `;
 
 export const StatusTitle = styled.div`
@@ -78,11 +61,12 @@ export const StatusTitle = styled.div`
 
 export const DialogsWrapper = styled.div`
     display: flex;
+    align-self: center;
     justify-content: space-between;
     height: 100%;
     align-items: center;
-    width: 157px;
-    padding: 0 13px 0 13px;
+    width: 156px;
+    padding: 0 16px 0 16px;
 `;
 
 export const DialogsTitle = styled.div`
@@ -109,23 +93,22 @@ export const SecondDialogsValue = styled.span`
 
 export const PaymentWrapper = styled.div`
     display: flex;
+    align-self: center;
+    color: ${(props) => props.theme.color.active};
     justify-content: space-between;
-    width: 262px;
+    width: 256px;
     padding: 0 15px 0 15px;
+    font-size: 14px;
 `;
 
 export const PaymentTitle = styled.div`
-    color: ${(props) => props.theme.color.active};
     font-size: 14px;
 `;
 
-export const PaymentLinkTitle = styled.div`
+export const LinkTitle = styled.span`
     color: ${(props) => props.theme.color.active};
-    font-size: 14px;
     cursor: pointer;
-    :hover {
-        text-decoration: underline;
-    }
+    text-decoration: underline;
 `;
 
 export const PaymentValue = styled.div`
@@ -134,12 +117,22 @@ export const PaymentValue = styled.div`
     font-weight: 600;
 `;
 
-export const Separator = styled.div`
+const SeparatorStyles = css`
     width: 1px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 19px;
     display: flex;
     align-self: center;
+`;
+
+export const ItemSeparator = styled.div`
+    ${SeparatorStyles};
+    background-color: #FFFFFF;
+`;
+
+export const AddItemSeparator = styled.div`
+    ${SeparatorStyles};
+    background-color: ${(props) => props.theme.color.primary};
 `;
 
 export const Actions = styled.div`
@@ -149,15 +142,29 @@ export const Actions = styled.div`
 export const SettingsButton = styled.div`
     @keyframes rotate {
         100% {
-            transform: rotate(180deg);
+            transform: rotate(360deg);
         }
     }
 
     :hover {
-        animation: rotate 0.5s;
+        animation: rotate 0.5s cubic-bezier(0, 0.41, 0.61, 1);
     }
 
     display: flex;
     cursor: pointer;
 `;
 
+export const EmptyLine = styled.div`
+    background-color: ${(props) => props.theme.color.primary};
+    height: 7px;
+    border-radius: 55px;
+    width: 100%
+`;
+
+export const AddTitle = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: ${(props) => props.theme.color.mainText};
+`;

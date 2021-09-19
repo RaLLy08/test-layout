@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     height: 115px;
-    border: solid;
+    border: solid 1px;
     box-sizing: border-box;
     border-color: ${(props) => props.theme.color.primary};
     border-radius: 8px;
@@ -43,8 +43,12 @@ export const Title = styled.div`
 `;
 
 export const Value = styled.div`
-    color: ${(props) =>
-        props.active ? props.theme.color.danger : props.theme.color.mainText};
+    color: ${(props) =>{
+        if (props.danger) return props.theme.color.danger; 
+        if (props.secondary) return props.theme.color.secondary; 
+               
+        return props.theme.color.mainText;
+    }};
     font-size: 16px;
     font-weight: 600;
     text-align: end;
@@ -99,7 +103,6 @@ export const SettingsButton = styled.div`
 export const Img = styled.img`
 
 `
-
 
 export const ContentRight = styled.div`
     display: flex;

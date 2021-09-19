@@ -9,9 +9,7 @@ function ListHeader({ channels, totalChannels, nearestPayment, isnearestPaymentT
     return (
         <>
             <S.Wrapper>
-                <S.CardTitle>
-                    {LogoComponent}
-                </S.CardTitle>
+                <S.CardTitle>{LogoComponent}</S.CardTitle>
                 <S.CardContent>
                     <S.ContentLeft>
                         <S.ChannelsValues>
@@ -30,7 +28,10 @@ function ListHeader({ channels, totalChannels, nearestPayment, isnearestPaymentT
 
                     <S.ContentRight>
                         <S.ContentBox>
-                            <S.Value active={isnearestPaymentToday}>
+                            <S.Value
+                                danger={isnearestPaymentToday}
+                                secondary={!isnearestPaymentToday}
+                            >
                                 {nearestPayment}
                             </S.Value>
                             <S.Title active>Ближайший платеж</S.Title>

@@ -4,6 +4,7 @@ import { Img, StatusIcon, StatusTitle, StatusWrapper } from "./styled";
 import StatusRebootSvg from "../img/StatusReboot.svg";
 import StatusActiveSvg from "../img/StatusActive.svg";
 import StatusInactiveSvg from "../img/StatusInactive.svg";
+import StatusErrorSvg from "../img/StatusError.svg";
 
 function Status({ status }) {
     const statuses = {
@@ -19,14 +20,18 @@ function Status({ status }) {
             icon: StatusRebootSvg,
             title: "Перезагрузка",
         },
+        error: {
+            icon: StatusErrorSvg,
+            title: "Ошибка",
+        },
     };
 
     return (
         <StatusWrapper>
             <StatusIcon>
-                <Img src={statuses[status].icon} width="8px" height="8px" />
+                <Img src={statuses[status]?.icon} width="8px" height="8px" />
             </StatusIcon>
-            <StatusTitle>{statuses[status].title}</StatusTitle>
+            <StatusTitle>{statuses[status]?.title}</StatusTitle>
         </StatusWrapper>
     );
 }
