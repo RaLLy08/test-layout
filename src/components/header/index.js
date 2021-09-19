@@ -28,7 +28,7 @@ function Header() {
                         </S.BalanceValue>
                     </S.Balance>
                     <S.Notifications>
-                        <S.Img src={NotifyRingSvg} width="29px" height="31px" />
+                        <S.RingImg src={NotifyRingSvg} width="29px" height="31px" />
                     </S.Notifications>
                     <Popup
                         trigger={(open) => (

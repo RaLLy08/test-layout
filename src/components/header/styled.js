@@ -134,3 +134,56 @@ export const LargeScreen = styled.div`
         display: none;
     }
 `;
+
+export const RingImg = styled.img`
+    @keyframes shake {
+        0% {
+            transform: rotate(14deg);
+        }
+        10% {
+            transform: rotate(-14deg);
+        }
+        20% {
+            transform: rotate(10deg);
+        }
+        30% {
+            transform: rotate(-10deg);
+        }
+        40% {
+            transform: rotate(8deg);
+        }
+        50% {
+            transform: rotate(-8deg);
+        }
+        60% {
+            transform: rotate(7deg);
+        }
+        70% {
+            transform: rotate(-7deg);
+        }
+        75% {
+            transform: rotate(6deg);
+        }
+        80% {
+            transform: rotate(-6deg);
+        }
+        85% {
+            transform: rotate(-5deg);
+        }
+        90% {
+            transform: rotate(-5deg);
+        }
+        95% {
+            transform: rotate(3deg);
+        }
+        100% {
+            transform: rotate(-3deg);
+        }
+    }
+
+    :hover {
+        animation: shake 0.3s cubic-bezier(0, 0.77, 0, 1.02);
+    }
+
+    cursor: pointer;
+`;
