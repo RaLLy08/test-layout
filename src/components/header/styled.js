@@ -73,7 +73,7 @@ export const PeriodTitle = styled.div`
     font-weight: 500;
     white-space: nowrap;
     margin-right: 30px;
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 1040px) {
         display: none;
     }
 `;
