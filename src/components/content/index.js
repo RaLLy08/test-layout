@@ -78,7 +78,7 @@ function Content() {
                                     />
                                 </UserLogo>
                                 <UserWrapper>
-                                    <UserTitle>@spb.designer</UserTitle>
+                                    <UserTitle>@spb.ddfdfsfsdsfsr</UserTitle>
                                 </UserWrapper>
                             </User>
 

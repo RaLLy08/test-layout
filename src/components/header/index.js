@@ -5,12 +5,17 @@ import UserPhotoSvg from "./img/Userphoto.svg";
 import NotifyRingSvg from "./img/NotifyRing.svg";
 import ArrowSvg from "./img/ArrowDown.svg";
 import UserPopup from "./popup";
+import BurgerSvg from "./img/Burger.svg";
 
 function Header() {
     return (
         <>
             <S.Wrapper>
                 <S.Main>
+                    <S.BurgerMenu>
+                        <S.Img src={BurgerSvg} />
+                    </S.BurgerMenu>
+
                     <S.MainTitle>Мои интеграций</S.MainTitle>
                 </S.Main>
                 <S.Right>

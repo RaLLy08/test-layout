@@ -9,34 +9,54 @@ export const Divider = styled.div`
 
 export const Wrapper = styled.div`
     min-width: 290px;
-    height: 100%;
     background-color: ${(props) => props.theme.color.primary};
+    @media only screen and (max-width: 1280px) {
+        min-width: 62px;
+        max-width: 62px;
+    }
+    @media only screen and (max-width: 720px) {
+        display: none;
+    }
 `;
 
 export const Header = styled.div`
     height: 95px;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 `;
 
-export const Ellipce = styled.div`
-    background-color: #7b82ff;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
+export const LargeLogoWrapper = styled.div`
+    @media only screen and (max-width: 1280px) {
+        display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 178px;
+    padding-left: 5px;
+`;
+
+export const SmallLogoWrapper = styled.div`
+    @media only screen and (max-width: 1280px) {
+        display: block;
+    }
+    display: none;
 `;
 
 export const Main = styled.div`
-    height: 100%;
-    padding: 30px 39px 0px 20px;
+    padding: 30px 10px 0px 10px;
 `;
 
 export const List = styled.div`
-    height: 100%;
-    width: 100%;
+    @media only screen and (max-width: 1280px) {
+        padding: 0;
+    }
+    padding-right: 29px;
+    padding-left: 10px;
 `;
+
 export const ListItem = styled.div`
     display: flex;
     align-items: center;
@@ -52,7 +72,9 @@ export const ListItem = styled.div`
 `;
 
 export const ListTitle = styled.div`
- 
+    @media only screen and (max-width: 1280px) {
+        display: none;
+    }
     font-size: 14px;
     color: ${(props) => props.theme.color.mainText};
     ${({ thick }) =>

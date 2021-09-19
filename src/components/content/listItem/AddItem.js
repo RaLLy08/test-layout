@@ -2,10 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import * as S from "./styled";
  
-
-function AddItem({
-    active
-}) {
     const Plug = styled.div`
         display: flex;
         justify-content: center;
@@ -51,7 +47,7 @@ function AddItem({
         }
         ${(props) =>
             props.active &&
-        `
+            `
         :hover {
             transform: scale(1.1);
         }
@@ -68,9 +64,14 @@ function AddItem({
     `;
 
     const AddItemDisabledTitle = styled.div`
-       color: ${props => props.theme.color.secondary};
-       font-size: 12px;
+        color: ${(props) => props.theme.color.secondary};
+        font-size: 12px;
     `;
+    
+function AddItem({
+    active
+}) {
+
 
     return (
         <S.AddWrapper>

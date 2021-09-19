@@ -17,7 +17,8 @@ export const Divider = styled.div`
 `;
 
 export const Main = styled.div`
-    
+    display: flex;
+    flex-direction: row;
 `;
 
 export const MainTitle = styled.div`
@@ -62,6 +63,9 @@ export const PeriodTitle = styled.div`
     font-size: 14px;
     font-weight: 500;
     margin-right: 30px;
+    @media only screen and (max-width: 720px) {
+        display: none;
+    }
 `;
 
 export const Notifications = styled.div`
@@ -97,6 +101,16 @@ export const Img = styled.img``;
 
 export const ArrowImgWraper = styled.div`
     ${({ up }) => up && "transform: rotate(180deg) translateY(-4px);"}
+`;
+
+
+export const BurgerMenu = styled.div`
+    display: none;
+    margin-right: 38px;
+    cursor: pointer;
+    @media only screen and (max-width: 720px) {
+        display: flex;
+    }
 `;
 
 

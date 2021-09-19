@@ -10,9 +10,7 @@ function ListItem({ UserComponent, dialogs, followers, status, paymentDate }) {
     return (
         <S.ItemWrapper inactive={status === "inactive"}>
             <S.Content>
-                <S.UserInfo>
-                    {UserComponent}
-                </S.UserInfo>
+                <S.UserInfo>{UserComponent}</S.UserInfo>
 
                 <S.StatusWrapper>
                     <Status status={status} />
@@ -35,9 +33,27 @@ function ListItem({ UserComponent, dialogs, followers, status, paymentDate }) {
 
                 <S.PaymentWrapper>
                     {status === "inactive" ? (
-                        <S.LinkTitle>Оплатить подписку</S.LinkTitle>
+                        <>
+                            <S.LargeScreen>
+                                <S.LinkTitle>Оплатить подписку </S.LinkTitle>
+
+                            </S.LargeScreen>
+                            <S.SmallScreen>
+                                <S.LinkTitle>Оплатить</S.LinkTitle>
+                            </S.SmallScreen>
+
+                        </>
                     ) : (
-                        <S.PaymentTitle>Следующий платеж</S.PaymentTitle>
+                        <>
+                            <S.LargeScreen>
+                                <S.PaymentTitle>
+                                    Следующий платеж
+                                </S.PaymentTitle>
+                            </S.LargeScreen>
+                            <S.SmallScreen>
+                                <S.PaymentTitle>След. платеж</S.PaymentTitle>
+                            </S.SmallScreen>
+                        </>
                     )}
                     <S.PaymentValue>{paymentDate}</S.PaymentValue>
                 </S.PaymentWrapper>

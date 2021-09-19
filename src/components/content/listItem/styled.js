@@ -6,7 +6,7 @@ const WrapperStyles = css`
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 12px;
+    padding-left: 14px;
     padding-right: 18px;
     display: flex;
     align-items: center;
@@ -34,13 +34,12 @@ export const Content = styled.div`
 export const UserInfo = styled.div`
     width: 199px;
     display: flex;
+    @media only screen and (max-width: 720px) {
+        width: 108px;
+    }
 `;
 
 export const Img = styled.img``;
-
-
-
-
 
 export const StatusWrapper = styled.div`
     width: 110px;
@@ -99,6 +98,9 @@ export const PaymentWrapper = styled.div`
     width: 256px;
     padding: 0 15px 0 15px;
     font-size: 14px;
+    @media only screen and (max-width: 720px) {
+        width: 210px;
+    }
 `;
 
 export const PaymentTitle = styled.div`
@@ -158,7 +160,8 @@ export const EmptyLine = styled.div`
     background-color: ${(props) => props.theme.color.primary};
     height: 7px;
     border-radius: 55px;
-    width: 100%
+    width: 100%;
+    
 `;
 
 export const AddTitle = styled.div`
@@ -167,4 +170,18 @@ export const AddTitle = styled.div`
     font-size: 14px;
     font-weight: 600;
     color: ${(props) => props.theme.color.mainText};
+`;
+
+
+export const SmallScreen = styled.div`
+    display: none;
+    @media only screen and (max-width: 720px) {
+        display: block;
+    }
+`;
+
+export const LargeScreen = styled.div`
+    @media only screen and (max-width: 720px) {
+        display: none;
+    }
 `;
