@@ -14,7 +14,7 @@ function Header() {
             <S.Wrapper>
                 <S.Main>
                     <S.BurgerMenu>
-                        <S.Img src={BurgerSvg} />
+                        <S.Img src={BurgerSvg} width="28px" heigth="21px"/>
                     </S.BurgerMenu>
                     <S.MainTitle>Мои интеграций</S.MainTitle>
                 </S.Main>
