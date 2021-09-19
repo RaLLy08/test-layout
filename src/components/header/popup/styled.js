@@ -8,7 +8,9 @@ export const Wrapper = styled.div`
     height: 280px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgb(146, 146, 166, 0.4);
-
+    position: fixed;
+    right: 41px;
+    top: 115px;
     @keyframes anvil {
         0% {
             transform: scale(1) translateY(0px);

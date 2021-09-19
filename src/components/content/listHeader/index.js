@@ -56,8 +56,6 @@ function ListHeader({ channels, totalChannels, nearestPayment, isnearestPaymentT
                                 ></S.Img>
                             </S.SettingsButton>
                         )}
-                        offsetX={94}
-                        offsetY={2}
                         closeOnDocumentClick
                     >
                         <ShowMore />

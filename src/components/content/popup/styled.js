@@ -29,6 +29,11 @@ export const ShowMoreWraper = styled.div`
     justify-content: space-between;
     height: 90px;
     width: 155px;
+    position: absolute;
+    left: -15px;
+    @media only screen and (max-width: 991px) {
+        left: -190px;
+    }
 `;
 
 export const SettingsAction = styled.div`
@@ -37,7 +42,8 @@ export const SettingsAction = styled.div`
     font-weight: 500;
     :hover {
         text-decoration: underline;
-    }
+    };
+ 
 `;
 
 export const AlertWraper = styled.div`
@@ -96,6 +102,11 @@ export const SettingsWraper = styled.div`
     justify-content: space-between;
     height: 86px;
     width: 132px;
+    position: absolute;
+    left: -15px;
+    @media only screen and (max-width: 991px) {
+        left: -155px;
+    }
 `;
 
 export const SettingsActionBox = styled.div`

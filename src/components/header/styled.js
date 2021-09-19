@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-right: 24px;
-    /* margin-left: 6%; */
+    margin-left: max(calc(100px - (1920px - 100vw)), 40px);
     @media only screen and (max-width: 991px) {
         height: 77px;
     }

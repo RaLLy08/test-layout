@@ -69,7 +69,6 @@ function ListItem({ UserComponent, dialogs, followers, status, paymentDate }) {
                             />
                         </S.SettingsButton>
                     )}
-                    offsetX={70}
                     closeOnDocumentClick
                 >
                     <Settings />

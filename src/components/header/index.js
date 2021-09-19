@@ -7,6 +7,7 @@ import ArrowSvg from "./img/ArrowDown.svg";
 import UserPopup from "./popup";
 import BurgerSvg from "./img/Burger.svg";
 
+
 function Header() {
     return (
         <>
@@ -15,7 +16,6 @@ function Header() {
                     <S.BurgerMenu>
                         <S.Img src={BurgerSvg} />
                     </S.BurgerMenu>
-
                     <S.MainTitle>Мои интеграций</S.MainTitle>
                 </S.Main>
                 <S.Right>
@@ -58,8 +58,8 @@ function Header() {
                                 </S.MailAction>
                             </S.MailWrapper>
                         )}
-                        offsetX={-24}
-                        offsetY={45}
+                        // offsetX={-64}
+                        // offsetY={45}
                         closeOnDocumentClick
                     >
                         <UserPopup />
