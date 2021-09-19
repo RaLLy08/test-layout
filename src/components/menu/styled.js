@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
         min-width: 62px;
         max-width: 62px;
     }
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         display: none;
     }
 `;
@@ -89,5 +89,4 @@ export const ListIconWrapper = styled.div`
     text-align: center;
 `;
 
-export const Img = styled.img`
-`;
+export const Img = styled.img``;

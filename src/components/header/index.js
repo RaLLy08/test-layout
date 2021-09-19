@@ -28,7 +28,7 @@ function Header() {
                         </S.BalanceValue>
                     </S.Balance>
                     <S.Notifications>
-                        <S.Img src={NotifyRingSvg} width="29px" height="32px" />
+                        <S.Img src={NotifyRingSvg} width="29px" height="31px" />
                     </S.Notifications>
                     <Popup
                         trigger={(open) => (
@@ -40,7 +40,13 @@ function Header() {
                                         height="32px"
                                     />
                                 </S.UserPhotoWrapper>
-                                <S.Mail>nikiforovdesign@yandex.ru</S.Mail>
+                                <S.LargeScreen>
+                                    <S.Mail>nikiforovdesign@yandex.ru</S.Mail>
+                                </S.LargeScreen>
+                                <S.SmallScreen>
+                                    <S.Mail>Кямиль Н.</S.Mail>
+                                </S.SmallScreen>
+
                                 <S.MailAction>
                                     <S.ArrowImgWraper up={open}>
                                         <S.Img

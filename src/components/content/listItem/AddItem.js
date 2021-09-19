@@ -57,79 +57,91 @@ import * as S from "./styled";
         `};
     `;
 
-    const AddItemDisabledWrapper = styled.div`
-        width: 497px;
-        display: flex;
-        align-items: center;
-    `;
-
     const AddItemDisabledTitle = styled.div`
         color: ${(props) => props.theme.color.secondary};
         font-size: 12px;
+        width: 312px;
     `;
-    
+
+    export const Title = styled.div`
+        width: 176px;
+        display: flex;
+        @media only screen and (max-width: 991px) {
+            min-width: 158px;
+        };
+        margin-left: 8.8px;
+    `;
+
+    export const ContentBox = styled.div`
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 991px) {
+            min-width: 500px;
+        } ;
+    `;
+
 function AddItem({
     active
 }) {
 
-
     return (
         <S.AddWrapper>
-            <S.Content>
+            <Title>
+                <Plug right="12px">
+                    <Plus active={active} />
+                </Plug>
+                <S.AddTitle>Cоздать канал</S.AddTitle>
+            </Title>
+
+            <ContentBox>
                 {active ? (
                     <>
-                        <S.UserInfo>
-                            <Plug left="7px" right="14px">
-                                <Plus active={active} />
-                            </Plug>
-                            <S.AddTitle> Cоздать канал</S.AddTitle>
-                        </S.UserInfo>
-                        <S.StatusWrapper>
-                            <Plug width="8px" heigth="8px" right="10px">
-                                <S.EmptyLine />
-                            </Plug>
-                            <Plug width="66px">
-                                <S.EmptyLine />
-                            </Plug>
-                        </S.StatusWrapper>
+                        <Plug width="8px" heigth="8px" left="14px" right="10px">
+                            <S.EmptyLine />
+                        </Plug>
+                        <Plug width="66px" right="25px">
+                            <S.EmptyLine />
+                        </Plug>
                         <S.AddItemSeparator />
 
-                        <S.DialogsWrapper>
+                        <Plug width="156px" left="16px" right="17px">
                             <S.EmptyLine />
-                        </S.DialogsWrapper>
+                        </Plug>
                     </>
                 ) : (
-                    <AddItemDisabledWrapper>
-                        <Plug left="7px" right="14px">
-                            <Plus active={active} />
-                        </Plug>
-                        <Plug right="32px">
-                            <S.AddTitle>Cоздать канал</S.AddTitle>
-                        </Plug>
-                        <AddItemDisabledTitle>
-                            Перед созданием канала{" "}
-                            <S.LinkTitle>оплатите подписку</S.LinkTitle>
-                        </AddItemDisabledTitle>
-                    </AddItemDisabledWrapper>
+                    <AddItemDisabledTitle>
+                        Перед созданием канала{" "}
+                        <S.LinkTitle>оплатите подписку</S.LinkTitle>
+                    </AddItemDisabledTitle>
                 )}
+
                 <S.AddItemSeparator />
 
-                <S.PaymentWrapper>
-                    <Plug width="129px" right="27px">
-                        <S.EmptyLine />
-                    </Plug>
-                    <Plug width="107px">
-                        <S.EmptyLine />
-                    </Plug>
-                </S.PaymentWrapper>
-            </S.Content>
-            <S.Actions>
-                <Plug width="18px" left="auto">
+                <Plug width="127px" left="19px" right="27px">
                     <S.EmptyLine />
                 </Plug>
-            </S.Actions>
+
+                <Plug width="105px">
+                    <S.EmptyLine />
+                </Plug>
+
+                <Plug width="18px" left="13px">
+                    <S.EmptyLine />
+                </Plug>
+            </ContentBox>
         </S.AddWrapper>
     );
 }
 
 export default AddItem;
+//  <AddItemDisabledWrapper>
+//      <Plug left="7px" right="14px">
+//          <Plus active={active} />
+//      </Plug>
+//      <Plug right="32px">
+//          <S.AddTitle>Cоздать канал</S.AddTitle>
+//      </Plug>
+//      <AddItemDisabledTitle>
+//          Перед созданием канала <S.LinkTitle>оплатите подписку</S.LinkTitle>
+//      </AddItemDisabledTitle>
+//  </AddItemDisabledWrapper>;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.div`
     height: 115px;
     border: solid 1px;
@@ -11,6 +10,9 @@ export const Wrapper = styled.div`
     width: 100%;
     padding-left: 18px;
     align-items: center;
+    @media only screen and (max-width: 991px) {
+        height: 80px;
+    }
 `;
 
 export const CardTitle = styled.div`
@@ -19,6 +21,9 @@ export const CardTitle = styled.div`
     align-items: center;
     align-self: center;
     justify-content: space-between;
+    @media only screen and (max-width: 991px) {
+        min-width: 138px;
+    }
 `;
 
 export const ChannelsValues = styled.div`
@@ -43,10 +48,10 @@ export const Title = styled.div`
 `;
 
 export const Value = styled.div`
-    color: ${(props) =>{
-        if (props.danger) return props.theme.color.danger; 
-        if (props.secondary) return props.theme.color.secondary; 
-               
+    color: ${(props) => {
+        if (props.danger) return props.theme.color.danger;
+        if (props.secondary) return props.theme.color.secondary;
+
         return props.theme.color.mainText;
     }};
     font-size: 16px;
@@ -100,13 +105,14 @@ export const SettingsButton = styled.div`
     }
 `;
 
-export const Img = styled.img`
-
-`
+export const Img = styled.img``;
 
 export const ContentRight = styled.div`
     display: flex;
     width: 54%;
+    @media only screen and (max-width: 991px) {
+        width: 100%;
+    }
 `;
 
 export const ContentLeft = styled.div`
@@ -115,5 +121,7 @@ export const ContentLeft = styled.div`
     align-items: center;
     justify-content: end;
     width: 46%;
+    @media only screen and (max-width: 991px) {
+        min-width: 189px;
+    }
 `;
-

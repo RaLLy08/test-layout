@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.div`
     margin-left: 6%;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 991px) {
+        margin-left: 3.2%;
+    }
 `;
 
 export const ContentWraper = styled.div`
     width: 843px;
     margin-top: 30px;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         width: 720px;
     }
 `;
 
 export const Img = styled.img``;
-
 
 export const User = styled.div`
     display: flex;
@@ -30,7 +31,7 @@ export const UserLogo = styled.div`
     margin-right: 12px;
     display: flex;
     justify-content: center;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         display: none;
     }
 `;
@@ -60,7 +61,21 @@ export const Followers = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         display: none;
+    }
+`;
+
+export const LogoImg = styled.img`
+    @media only screen and (max-width: 991px) {
+        width: 42px;
+        height: 42px;
+    }
+`;
+
+export const TitleImg = styled.img`
+    @media only screen and (max-width: 991px) {
+        width: 84px;
+        height: 38px;
     }
 `;

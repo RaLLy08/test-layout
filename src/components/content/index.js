@@ -3,6 +3,8 @@ import {
     ContentWraper,
     Followers,
     Img,
+    LogoImg,
+    TitleImg,
     User,
     UserLogo,
     UserTitle,
@@ -26,16 +28,16 @@ function Content() {
                 <ListHeader
                     LogoComponent={
                         <>
-                            <Img
+                            <LogoImg
                                 src={InstLogoSvg}
                                 width="56px"
                                 height="56px"
-                            ></Img>
-                            <Img
+                            />
+                            <TitleImg
                                 src={InstTitleSvg}
                                 width="111px"
                                 height="45px"
-                            ></Img>
+                            />
                         </>
                     }
                     channels={3}
@@ -117,16 +119,16 @@ function Content() {
                 <ListHeader
                     LogoComponent={
                         <>
-                            <Img
+                            <LogoImg
                                 src={WpLogoSvg}
                                 width="56px"
                                 height="56px"
-                            ></Img>
-                            <Img
+                            ></LogoImg>
+                            <TitleImg
                                 src={WpTitleSvg}
                                 width="111px"
                                 height="45px"
-                            ></Img>
+                            ></TitleImg>
                         </>
                     }
                     channels={2}

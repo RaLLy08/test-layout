@@ -6,7 +6,7 @@ const WrapperStyles = css`
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 14px;
+    padding-left: 10px;
     padding-right: 18px;
     display: flex;
     align-items: center;
@@ -30,11 +30,10 @@ export const Content = styled.div`
     display: flex;
 `;
 
-
 export const UserInfo = styled.div`
     width: 199px;
     display: flex;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         width: 108px;
     }
 `;
@@ -70,7 +69,7 @@ export const DialogsWrapper = styled.div`
 
 export const DialogsTitle = styled.div`
     font-size: 12px;
-    color: ${props => props.theme.color.secondary}
+    color: ${(props) => props.theme.color.secondary};
 `;
 
 export const DialogsValue = styled.div`
@@ -98,7 +97,7 @@ export const PaymentWrapper = styled.div`
     width: 256px;
     padding: 0 15px 0 15px;
     font-size: 14px;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         width: 210px;
     }
 `;
@@ -129,7 +128,7 @@ const SeparatorStyles = css`
 
 export const ItemSeparator = styled.div`
     ${SeparatorStyles};
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 `;
 
 export const AddItemSeparator = styled.div`
@@ -161,7 +160,6 @@ export const EmptyLine = styled.div`
     height: 7px;
     border-radius: 55px;
     width: 100%;
-    
 `;
 
 export const AddTitle = styled.div`
@@ -172,16 +170,15 @@ export const AddTitle = styled.div`
     color: ${(props) => props.theme.color.mainText};
 `;
 
-
 export const SmallScreen = styled.div`
     display: none;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         display: block;
     }
 `;
 
 export const LargeScreen = styled.div`
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 991px) {
         display: none;
     }
 `;
