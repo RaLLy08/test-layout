@@ -54,9 +54,12 @@ export const AlertWraper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; // must ch
-    top: 110px;
-    left: calc(100% - 930px);
+    position: fixed;
+    top: 100px;
+    left: calc(100% - 920px);
+    @media only screen and (max-width: 991px) {
+        left: calc(100% - 780px);
+    }
 `;
 
 export const AlertTitle = styled.div`

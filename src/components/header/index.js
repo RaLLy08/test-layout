@@ -58,8 +58,6 @@ function Header() {
                                 </S.MailAction>
                             </S.MailWrapper>
                         )}
-                        // offsetX={-64}
-                        // offsetY={45}
                         closeOnDocumentClick
                     >
                         <UserPopup />

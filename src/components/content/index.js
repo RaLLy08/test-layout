@@ -21,7 +21,6 @@ import UserLogoSvg from "./img/UserLogo.svg";
 
 function Content() {
 
-
     return (
         <Wrapper>
             <ContentWraper>

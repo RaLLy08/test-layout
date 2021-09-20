@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import * as S from "./styled";
  
-
 
 function AddItem({
     active

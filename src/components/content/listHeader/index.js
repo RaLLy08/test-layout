@@ -1,7 +1,6 @@
 import Popup from "reactjs-popup";
 
 import * as S from "./styled";
-
 import ShowMoreSvg from "../img/ShowMore.svg";
 import ShowMore from "../popup/ShowMore";
 
