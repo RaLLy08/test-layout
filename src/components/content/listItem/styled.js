@@ -182,3 +182,80 @@ export const LargeScreen = styled.div`
         display: none;
     }
 `;
+
+export const Plug = styled.div`
+    display: flex;
+    justify-content: center;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    margin-right: ${(props) => props.right};
+    margin-left: ${(props) => props.left};
+`;
+
+export const Plus = styled.div`
+    border: 1px solid white;
+    background-color: ${(props) =>
+        props.active ? props.theme.color.active : props.theme.color.secondary};
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    border-radius: 999px;
+    position: relative;
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        height: 12px;
+        width: 2px;
+        border-radius: 50px;
+    }
+
+    &:after {
+        height: 2px;
+        width: 12px;
+        border-radius: 50px;
+    }
+    ${(props) =>
+        props.active &&
+        `
+        :hover {
+            transform: scale(1.1);
+        }
+        :active {
+            transform: scale(1);
+        }
+        `};
+`;
+
+export const AddItemDisabledTitle = styled.div`
+    color: ${(props) => props.theme.color.secondary};
+    font-size: 12px;
+    width: 312px;
+    white-space: nowrap;
+`;
+
+export const Title = styled.div`
+    width: 176px;
+    display: flex;
+    @media only screen and (max-width: 991px) {
+        min-width: 158px;
+    }
+    margin-left: 8.8px;
+`;
+
+export const ContentBox = styled.div`
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 991px) {
+        min-width: 500px;
+    } ;
+`;
